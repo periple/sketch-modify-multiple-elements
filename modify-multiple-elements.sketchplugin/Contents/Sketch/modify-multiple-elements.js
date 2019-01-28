@@ -506,7 +506,7 @@ function () {
     this.value = sketch__WEBPACK_IMPORTED_MODULE_0___default.a.UI.getStringFromUser("What's the new VALUE?");
     this.modifiedLayers = 0;
 
-    if (this.selector && this.type && this.value) {
+    if (this.selector && this.selector !== 'null' && this.type && this.type !== 'null' && this.value && this.value !== 'null') {
       this.updatePages().then(function () {
         return _this.resizeToFitChildren().then(function () {
           return _this.sendSuccessMessage();

@@ -10,7 +10,9 @@ class UpdateMultipleElements {
         this.value = sketch.UI.getStringFromUser("What's the new VALUE?");
         this.modifiedLayers = 0;
 
-        if (this.selector && this.type && this.value) {
+        if (this.selector && this.selector !== 'null'
+            && this.type && this.type !== 'null'
+            && this.value && this.value !== 'null') {
             this.updatePages().then(() => this.resizeToFitChildren().then(() => this.sendSuccessMessage()));
         } else {
             this.sendErrorMessage();
