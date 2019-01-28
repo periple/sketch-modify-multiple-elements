@@ -1,0 +1,25 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "run",
+      "identifier": "run-identifier",
+      "script": "modify-multiple-elements.js"
+    }
+  ],
+  "menu": {
+    "title": "Modify multiple elements",
+    "items": [
+      "run-identifier"
+    ]
+  },
+  "version": "0.1.0",
+  "name": "modify-multiple-elements",
+  "identifier": "modify-multiple-elements",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
+  "author": "Hugo Fargues",
+  "authorEmail": "hugo.fargues@gmail.com"
+}
