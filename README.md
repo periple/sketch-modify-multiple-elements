@@ -1,9 +1,11 @@
 # Update multiple elements in Sketch
 
+![alt text](https://raw.githubusercontent.com/photobox/sketch-modify-multiple-elements/master/assets/modify-multiple-elements.gif)
+
 This plugin let you modify multiple elements containing specific key on their name in Sketch application and fit its parents layers to its new dimensions.
 
 **Available attributes:** 
-`width`, `height`, `x`, `y` (could be have more but not tested)
+`width`, `height`, `x`, `y` (could have more properties but not tested)
 
 **Example:** 
 Modify width of every elements containing `dynamic-width` keyword on their name, in one time.
