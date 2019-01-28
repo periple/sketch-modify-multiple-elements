@@ -2,7 +2,6 @@ import sketch from 'sketch';
 
 class UpdateMultipleElements {
 
-
     constructor (context) {
         this.context = context;
         this.selector = sketch.UI.getStringFromUser("What is the ID elements?");
