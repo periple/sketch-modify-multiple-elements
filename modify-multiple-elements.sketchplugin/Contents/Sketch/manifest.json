@@ -20,6 +20,6 @@
   "identifier": "modify-multiple-elements",
   "disableCocoaScriptPreprocessor": true,
   "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
-  "author": "Hugo Fargues",
-  "authorEmail": "hugo.fargues@gmail.com"
+  "author": "Photobox",
+  "authorEmail": "hugo.fargues@photobox.com"
 }

@@ -2,11 +2,11 @@ import sketch from 'sketch';
 
 class UpdateMultipleElements {
 
-    constructor (context) {
+    constructor (context, properties) {
         this.context = context;
-        this.selector = sketch.UI.getStringFromUser("What is the ID elements?");
-        this.type = sketch.UI.getStringFromUser("What PROPERTY would you like to change?");
-        this.value = sketch.UI.getStringFromUser("What's the new VALUE?");
+        this.selector = properties.selector || sketch.UI.getStringFromUser("What is the ID elements?");
+        this.type = properties.type || sketch.UI.getStringFromUser("What PROPERTY would you like to change?");
+        this.value = properties.value || sketch.UI.getStringFromUser("What's the new VALUE?");
         this.modifiedLayers = 0;
 
         if (this.selector && this.selector !== 'null'
@@ -71,5 +71,5 @@ class UpdateMultipleElements {
 }
 
 export default function () {
-    new UpdateMultipleElements(context);
+    new UpdateMultipleElements(context, {});
 }

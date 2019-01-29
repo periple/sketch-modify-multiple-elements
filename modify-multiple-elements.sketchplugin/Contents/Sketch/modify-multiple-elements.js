@@ -495,15 +495,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 var UpdateMultipleElements =
 /*#__PURE__*/
 function () {
-  function UpdateMultipleElements(context) {
+  function UpdateMultipleElements(context, properties) {
     var _this = this;
 
     _classCallCheck(this, UpdateMultipleElements);
 
     this.context = context;
-    this.selector = sketch__WEBPACK_IMPORTED_MODULE_0___default.a.UI.getStringFromUser("What is the ID elements?");
-    this.type = sketch__WEBPACK_IMPORTED_MODULE_0___default.a.UI.getStringFromUser("What PROPERTY would you like to change?");
-    this.value = sketch__WEBPACK_IMPORTED_MODULE_0___default.a.UI.getStringFromUser("What's the new VALUE?");
+    this.selector = properties.selector || sketch__WEBPACK_IMPORTED_MODULE_0___default.a.UI.getStringFromUser("What is the ID elements?");
+    this.type = properties.type || sketch__WEBPACK_IMPORTED_MODULE_0___default.a.UI.getStringFromUser("What PROPERTY would you like to change?");
+    this.value = properties.value || sketch__WEBPACK_IMPORTED_MODULE_0___default.a.UI.getStringFromUser("What's the new VALUE?");
     this.modifiedLayers = 0;
 
     if (this.selector && this.selector !== 'null' && this.type && this.type !== 'null' && this.value && this.value !== 'null') {
@@ -589,7 +589,7 @@ function () {
 }();
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  new UpdateMultipleElements(context);
+  new UpdateMultipleElements(context, {});
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/promise-polyfill/lib/index.js */ "./node_modules/promise-polyfill/lib/index.js")))
 
