@@ -2,7 +2,7 @@ import sketch from 'sketch';
 
 class UpdateMultipleElements {
 
-    constructor (context, properties) {
+    constructor(context, properties) {
         this.context = context;
         this.selector = properties.selector || sketch.UI.getStringFromUser("What is the ID elements?");
         this.type = properties.type || sketch.UI.getStringFromUser("What PROPERTY would you like to change?");
@@ -18,16 +18,16 @@ class UpdateMultipleElements {
         }
     }
 
-    sendSuccessMessage () {
-        sketch.UI.message("We set "+ this.type +" to " + this.value + "px on "+ this.modifiedLayers +" "+
+    sendSuccessMessage() {
+        sketch.UI.message("We set " + this.type + " to " + this.value + "px on " + this.modifiedLayers + " " +
             (this.modifiedLayers.length > 1 ? "elements" : "element") + " 🙌");
     }
 
-    sendErrorMessage () {
+    sendErrorMessage() {
         sketch.UI.message("Nothing changed, please update your query...");
     }
 
-    resizeToFitChildren () {
+    resizeToFitChildren() {
         return new Promise(resolve => {
             this.context.document.pages().forEach(page => {
                 if (page.resizeToFitChildrenWithOption) {
@@ -45,7 +45,7 @@ class UpdateMultipleElements {
         });
     }
 
-    updateLayers (layers) {
+    updateLayers(layers) {
         return new Promise(resolve => {
             layers.forEach((layer, index) => {
                 if (layer.name().includes(this.selector)) {
@@ -57,7 +57,7 @@ class UpdateMultipleElements {
         });
     }
 
-    updatePages () {
+    xupdatePages() {
         return new Promise(resolve => {
             const pages = this.context.document.pages();
             pages.forEach((page, index) => {
@@ -72,156 +72,382 @@ class UpdateMultipleElements {
 
 const mmToPx = (mm) => Math.floor(mm * 3.7795275591);
 
-const frameCanvas =  () => {
+const frameCanvas = () => {
+
+
     const relief = {
-    	width: 64,
-    	height: 64
+        width: 64,
+        height: 64
     };
     const frame = {
-    	width: 45,
-    	height: 45
+        width: 45,
+        height: 45
     };
-    const shadow = {
-    	width: 45,
-    	height: 45
-    };
-    const content = { width: mmToPx(407), height: mmToPx(305) };
+
+
+    const content = {width: mmToPx(500), height: mmToPx(500)};
 
     const data = [];
     /**
      * Relief
      */
-    // Top
+    // cadre interne taille
     data.push({
-    	selector: 'relief-width',
-    	type: 'width',
-    	value: content.width + 2 * frame.width + relief.width
+        selector: 'innerFrame_0',
+        type: 'width',
+        value: content.width
     });
+
     data.push({
-    	selector: 'relief-top-mask',
-    	type: 'x',
-    	value: content.width + relief.width * Math.sqrt(2)
+        selector: 'innerFrame_0',
+        type: 'height',
+        value: frame.height
     });
-    // Right
+
     data.push({
-    	selector: 'relief-right',
-    	type: 'x',
-    	value: content.width + 2 * frame.width
+        selector: 'innerFrame_2',
+        type: 'width',
+        value: content.width
     });
+
     data.push({
-    	selector: 'relief-height',
-    	type: 'height',
-    	value: content.height + 2 * frame.height + relief.height
+        selector: 'innerFrame_2',
+        type: 'height',
+        value: frame.height
     });
+
     data.push({
-    	selector: 'relief-right-mask',
-    	type: 'y',
-    	value: content.height + 2 * frame.height
+        selector: 'innerFrame_1',
+        type: 'height',
+        value: content.height
     });
-    /**
-     * Shadow
-     */
-    // Top
+
     data.push({
-    	selector: 'shadow-top',
-    	type: 'width',
-    	value: content.width - shadow.width
+        selector: 'innerFrame_1',
+        type: 'width',
+        value: frame.width
     });
-    // Left
+
     data.push({
-    	selector: 'shadow-left-height',
-    	type: 'height',
-    	value: content.height
+        selector: 'innerFrame_3',
+        type: 'height',
+        value: content.height
     });
+
     data.push({
-    	selector: 'shadow-left-mask',
-    	type: 'y',
-    	value: content.height + shadow.height * Math.sqrt(2)
+        selector: 'innerFrame_3',
+        type: 'width',
+        value: frame.width
     });
-    // Right
+
+
+    //cadre interne position
     data.push({
-    	selector: 'shadow-right',
-    	type: 'height',
-    	value: content.height - shadow.height
+        selector: 'innerFrame_0',
+        type: 'x',
+        value: frame.width
     });
+    `
+    `
     data.push({
-    	selector: 'shadow-right',
-    	type: 'x',
-    	value: content.width
+        selector: 'innerFrame_0',
+        type: 'y',
+        value: frame.height
     });
-    // Bottom
+
     data.push({
-    	selector: 'shadow-bottom',
-    	type: 'y',
-    	value: content.height + shadow.height * Math.sqrt(2)
+        selector: 'innerFrame_1',
+        type: 'x',
+        value: 0
     });
+    `
+    `
     data.push({
-    	selector: 'shadow-bottom-width',
-    	type: 'width',
-    	value: content.width
+        selector: 'innerFrame_1',
+        type: 'y',
+        value: frame.height + content.height
     });
-    /**
-     * Frame
-     */
-    // Width
+
     data.push({
-    	selector: 'frame-width',
-    	type: 'width',
-    	value: content.width + 2 * frame.width
+        selector: 'innerFrame_2',
+        type: 'x',
+        value: frame.width
     });
-    // Height
+    `
+    `
     data.push({
-    	selector: 'frame-height',
-    	type: 'height',
-    	value: content.height + 2 * frame.width
+        selector: 'innerFrame_2',
+        type: 'y',
+        value: content.width + 2 * frame.height
     });
-    // Top
+
     data.push({
-    	selector: 'frame-top-mask',
-    	type: 'x',
-    	value: content.width + frame.width
+        selector: 'innerFrame_3',
+        type: 'x',
+        value: content.width + frame.width
     });
-    // Left
+    `
+    `
     data.push({
-    	selector: 'frame-left-mask',
-    	type: 'y',
-    	value: content.height + frame.height * (1.715 * Math.sqrt(2))
+        selector: 'innerFrame_3',
+        type: 'y',
+        value: content.width + frame.height
     });
-    // Right
+
+// corner size :
     data.push({
-    	selector: 'frame-right',
-    	type: 'x',
-    	value: content.width + frame.width
+        selector: 'corner_0',
+        type: 'width',
+        value: frame.width
     });
+
     data.push({
-    	selector: 'frame-right-mask',
-    	type: 'x',
-    	value: content.width
+        selector: 'corner_0',
+        type: 'height',
+        value: frame.height
     });
+
     data.push({
-    	selector: 'frame-right-mask',
-    	type: 'y',
-    	value: content.height + frame.height * (1 + Math.sqrt(2))
+        selector: 'corner_1',
+        type: 'width',
+        value: frame.width
     });
-    // Bottom
+
     data.push({
-    	selector: 'frame-bottom',
-    	type: 'y',
-    	value: content.height + frame.height * (1.715 * Math.sqrt(2))
+        selector: 'corner_1',
+        type: 'height',
+        value: frame.height
     });
+
     data.push({
-    	selector: 'frame-bottom-mask',
-    	type: 'x',
-    	value: content.width + frame.width
+        selector: 'corner_2',
+        type: 'width',
+        value: frame.width
     });
+
     data.push({
-    	selector: 'frame-bottom-mask',
-    	type: 'y',
-    	value: content.height + frame.height * Math.sqrt(2)
+        selector: 'corner_2',
+        type: 'height',
+        value: frame.height
     });
-	// Apply Them all!
+
+    data.push({
+        selector: 'corner_3',
+        type: 'width',
+        value: frame.width
+    });
+
+    data.push({
+        selector: 'corner_3',
+        type: 'height',
+        value: frame.height
+    });
+
+    // corner position :
+    data.push({
+        selector: 'corner_0',
+        type: 'x',
+        value: 0
+    });
+
+    data.push({
+        selector: 'corner_0',
+        type: 'y',
+        value: 0
+    });
+
+    data.push({
+        selector: 'corner_1',
+        type: 'x',
+        value: 0
+    });
+
+    data.push({
+        selector: 'corner_1',
+        type: 'y',
+        value: 2 * frame.height + content.height
+    });
+
+    data.push({
+        selector: 'corner_2',
+        type: 'x',
+        value: frame.width + content.width
+    });
+
+    data.push({
+        selector: 'corner_2',
+        type: 'y',
+        value: 2 * frame.height + content.height
+    });
+
+    data.push({
+        selector: 'corner_3',
+        type: 'x',
+        value: frame.width + content.width
+    });
+
+    data.push({
+        selector: 'corner_3',
+        type: 'y',
+        value: frame.height
+    });
+
+    //triangle size
+
+    data.push({
+        selector: 'tri_0',
+        type: 'width',
+        value: relief.width
+    });
+
+    data.push({
+        selector: 'tri_0',
+        type: 'height',
+        value: relief.height
+    });
+
+    data.push({
+        selector: 'tri_1',
+        type: 'width',
+        value: relief.width
+    });
+
+    data.push({
+        selector: 'tri_1',
+        type: 'height',
+        value: relief.height
+    });
+
+    data.push({
+        selector: 'tri_2',
+        type: 'width',
+        value: relief.width
+    });
+
+    data.push({
+        selector: 'tri_2',
+        type: 'height',
+        value: relief.height
+    });
+
+    data.push({
+        selector: 'tri_3',
+        type: 'width',
+        value: relief.width
+    });
+
+    data.push({
+        selector: 'tri_3',
+        type: 'height',
+        value: relief.height
+    });
+
+    //triangle position
+
+    data.push({
+        selector: 'tri_0',
+        type: 'x',
+        value: 0
+    });
+
+    data.push({
+        selector: 'tri_0',
+        type: 'y',
+        value: relief.height + frame.height * 2 + content.height
+    });
+
+    data.push({
+        selector: 'tri_1',
+        type: 'x',
+        value: relief.width + content.width
+    });
+
+    data.push({
+        selector: 'tri_1',
+        type: 'y',
+        value: relief.height + frame.height * 2 + content.height
+    });
+
+    data.push({
+        selector: 'tri_2',
+        type: 'x',
+        value: relief.width + content.width
+    });
+
+    data.push({
+        selector: 'tri_2',
+        type: 'y',
+        value: relief.height + frame.height * 2 + content.height
+    });
+
+    data.push({
+        selector: 'tri_3',
+        type: 'x',
+        value: frame.width+ content.width
+    });
+
+    data.push({
+        selector: 'tri_3',
+        type: 'y',
+        value: relief.height
+    });
+
+
+    //set depth frame size
+    data.push({
+        selector: 'depthFrame_0',
+        type: 'width',
+        value: content.width
+    });
+
+    data.push({
+        selector: 'depthFrame_0',
+        type: 'height',
+        value: relief.height
+    });
+
+    data.push({
+        selector: 'depthFrame_1',
+        type: 'width',
+        value: content.width
+    });
+
+    data.push({
+        selector: 'depthFrame_1',
+        type: 'height',
+        value: relief.height
+    });
+
+    //set depth frame position
+    data.push({
+        selector: 'depthFrame_0',
+        type: 'x',
+        value: relief.width
+    });
+
+    data.push({
+        selector: 'depthFrame_0',
+        type: 'y',
+        value: relief.height + frame.height * 2 + content.height
+    });
+
+    data.push({
+        selector: 'depthFrame_1',
+        type: 'x',
+        value: relief.width + frame.width * 2 + content.width
+    });
+
+    data.push({
+        selector: 'depthFrame_1',
+        type: 'y',
+        value: relief.height * 2 + content.height
+    });
+
+
+
+    // Apply Them all!
     data.forEach((item) => {
-    	new UpdateMultipleElements(context, item);
+        new UpdateMultipleElements(context, item);
     });
 };
 

@@ -1,0 +1,16 @@
+<svg id="svg4141" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 2872 2743">
+ <path id="innerFrame_3" style="fill:#111111" d="m2712 243v2457h-43v-2457z"/>
+ <path id="innerFrame_2" style="fill:#111111" d="m2669 199v44h-0.2303v-0.006h-2625 0.23-0.23v-44z"/>
+ <path id="innerFrame_1" style="fill:#000000" d="m44 243v2457h-43v-2457z"/>
+ <path id="innerFrame_0" style="fill:#111111" d="m2669 2700v43h-2625v-43h0.2293l0.000023 0.01h2625v-0.01z"/>
+ <path id="corner_3" style="fill-rule:evenodd;fill:#111111" d="m2669 2700h43v43h-43z"/>
+ <path id="corner_2" style="fill-rule:evenodd;fill:#111111" d="m2669 200h43v43h-43z"/>
+ <path id="corner_1" style="fill-rule:evenodd;fill:#000000" d="m1 200h43v43h-43z"/>
+ <path id="corner_0" style="fill-rule:evenodd;fill:#000000" d="m1 2700h43v43h-43z"/>
+ <path id="depthFrame_1" style="fill:#000000" d="m2872 200-160 1.333v2342h160z"/>
+ <path id="depthFrame_0" style="fill:#4a4a49" d="m160 1v199h2552v-199z"/>
+ <path id="tri_3" style="fill:#000000" d="m2872 2542h-160v201h0.011z"/>
+ <path id="tri_2" style="fill:#000000" d="m2872 199h-160l160-199z"/>
+ <path id="tri_1" style="fill:#4a4a49" d="m2712 1v199l160-199z"/>
+ <path id="tri_0" style="fill:#4a4a49" d="m0 200.2h160v-199z"/>
+</svg>
