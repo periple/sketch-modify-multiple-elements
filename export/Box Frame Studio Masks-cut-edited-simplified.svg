@@ -1,16 +1,81 @@
-<svg id="svg4141" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 2872 2743">
- <path id="innerFrame_3" style="fill:#111111" d="m2712 243v2457h-43v-2457z"/>
- <path id="innerFrame_2" style="fill:#111111" d="m2669 199v44h-0.2303v-0.006h-2625 0.23-0.23v-44z"/>
- <path id="innerFrame_1" style="fill:#000000" d="m44 243v2457h-43v-2457z"/>
- <path id="innerFrame_0" style="fill:#111111" d="m2669 2700v43h-2625v-43h0.2293l0.000023 0.01h2625v-0.01z"/>
- <path id="corner_3" style="fill-rule:evenodd;fill:#111111" d="m2669 2700h43v43h-43z"/>
- <path id="corner_2" style="fill-rule:evenodd;fill:#111111" d="m2669 200h43v43h-43z"/>
- <path id="corner_1" style="fill-rule:evenodd;fill:#000000" d="m1 200h43v43h-43z"/>
- <path id="corner_0" style="fill-rule:evenodd;fill:#000000" d="m1 2700h43v43h-43z"/>
- <path id="depthFrame_1" style="fill:#000000" d="m2872 200-160 1.333v2342h160z"/>
- <path id="depthFrame_0" style="fill:#4a4a49" d="m160 1v199h2552v-199z"/>
- <path id="tri_3" style="fill:#000000" d="m2872 2542h-160v201h0.011z"/>
- <path id="tri_2" style="fill:#000000" d="m2872 199h-160l160-199z"/>
- <path id="tri_1" style="fill:#4a4a49" d="m2712 1v199l160-199z"/>
- <path id="tri_0" style="fill:#4a4a49" d="m0 200.2h160v-199z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 2872 2743"
+   version="1.1"
+   id="svg4141">
+  <metadata
+     id="metadata4160">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4158" />
+  <path
+     d="m 2712,243 0,2457 -43,0 0,-2457 z"
+     style="fill:#111111"
+     id="innerFrame_3" />
+  <path
+     d="m 2669,200.00588 0,42.99412 -0.2303,0 0,-0.006 -2624.7697,0 0.229979,0 L 44,242.994 44,200 Z"
+     style="fill:#111111;stroke-width:0.98846579"
+     id="innerFrame_2" />
+  <path
+     d="M 43,243 43,2700 0,2700 0,243 Z"
+     style="fill:#000000"
+     id="innerFrame_1" />
+  <path
+     d="m 2668.7707,2700 0,43 L 44,2743 l 0,-43 0.22928,0 2.3e-5,0.01 2624.770697,0 0,-0.01 z"
+     style="fill:#111111;stroke-width:0.99995631"
+     id="innerFrame_0" />
+  <path
+     d="m2669 2700h43v43h-43z"
+     style="fill-rule:evenodd;fill:#111111"
+     id="corner_3" />
+  <path
+     d="m2669 200h43v43h-43z"
+     style="fill-rule:evenodd;fill:#111111"
+     id="corner_2" />
+  <path
+     d="m 0,200 43,0 0,43 -43,0 z"
+     style="fill:#000000;fill-rule:evenodd"
+     id="corner_1" />
+  <path
+     d="m 0,2700 43,0 0,43 -43,0 z"
+     style="fill:#000000;fill-rule:evenodd"
+     id="corner_0" />
+  <path
+     d="m 2872,199 -160,1.33281 0,2341.66719 160,0 z"
+     style="fill:#000000;stroke-width:0.99992895"
+     id="depthFrame_1" />
+  <path
+     d="m160 1v199h2552v-199z"
+     style="fill:#4a4a49"
+     id="depthFrame_0" />
+  <path
+     d="m2872 2542h-160v201h0.011z"
+     style="fill:#000000"
+     id="tri_3" />
+  <path
+     d="m2872 199h-160l160-199z"
+     style="fill:#000000"
+     id="tri_2" />
+  <path
+     d="m2712 1v199l160-199z"
+     style="fill:#4a4a49"
+     id="tri_1" />
+  <path
+     d="m 0,200 160,0 0,-199 z"
+     style="fill:#4a4a49"
+     id="tri_0" />
 </svg>

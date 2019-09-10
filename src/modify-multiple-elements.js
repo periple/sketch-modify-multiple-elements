@@ -4,9 +4,9 @@ class UpdateMultipleElements {
 
     constructor(context, properties) {
         this.context = context;
-        this.selector = properties.selector || sketch.UI.getStringFromUser("What is the ID elements?");
-        this.type = properties.type || sketch.UI.getStringFromUser("What PROPERTY would you like to change?");
-        this.value = properties.value || sketch.UI.getStringFromUser("What's the new VALUE?");
+        this.selector = properties.selector ;//|| sketch.UI.getStringFromUser("What is the ID elements?");
+        this.type = properties.type;// || sketch.UI.getStringFromUser("What PROPERTY would you like to change?");
+        this.value = properties.value;// || sketch.UI.getStringFromUser("What's the new VALUE?");
         this.modifiedLayers = 0;
 
         if (this.selector && this.selector !== 'null'
@@ -57,7 +57,7 @@ class UpdateMultipleElements {
         });
     }
 
-    xupdatePages() {
+    updatePages() {
         return new Promise(resolve => {
             const pages = this.context.document.pages();
             pages.forEach((page, index) => {
@@ -85,7 +85,7 @@ const frameCanvas = () => {
     };
 
 
-    const content = {width: mmToPx(500), height: mmToPx(500)};
+    const content = {width: mmToPx(300), height: mmToPx(300)};
 
     const data = [];
     /**
@@ -147,12 +147,11 @@ const frameCanvas = () => {
         type: 'x',
         value: frame.width
     });
-    `
-    `
+
     data.push({
         selector: 'innerFrame_0',
         type: 'y',
-        value: frame.height
+        value: relief.height + frame.height + content.height
     });
 
     data.push({
@@ -160,12 +159,11 @@ const frameCanvas = () => {
         type: 'x',
         value: 0
     });
-    `
-    `
+
     data.push({
         selector: 'innerFrame_1',
         type: 'y',
-        value: frame.height + content.height
+        value: relief.height + frame.height
     });
 
     data.push({
@@ -173,12 +171,11 @@ const frameCanvas = () => {
         type: 'x',
         value: frame.width
     });
-    `
-    `
+
     data.push({
         selector: 'innerFrame_2',
         type: 'y',
-        value: content.width + 2 * frame.height
+        value: relief.height
     });
 
     data.push({
@@ -186,12 +183,11 @@ const frameCanvas = () => {
         type: 'x',
         value: content.width + frame.width
     });
-    `
-    `
+
     data.push({
         selector: 'innerFrame_3',
         type: 'y',
-        value: content.width + frame.height
+        value: relief.height + frame.height
     });
 
 // corner size :
@@ -235,8 +231,7 @@ const frameCanvas = () => {
         selector: 'corner_3',
         type: 'width',
         value: frame.width
-    });
-
+    })
     data.push({
         selector: 'corner_3',
         type: 'height',
@@ -253,7 +248,7 @@ const frameCanvas = () => {
     data.push({
         selector: 'corner_0',
         type: 'y',
-        value: 0
+        value: relief.height + frame.height + content.height
     });
 
     data.push({
@@ -265,7 +260,7 @@ const frameCanvas = () => {
     data.push({
         selector: 'corner_1',
         type: 'y',
-        value: 2 * frame.height + content.height
+        value: relief.height
     });
 
     data.push({
@@ -277,7 +272,7 @@ const frameCanvas = () => {
     data.push({
         selector: 'corner_2',
         type: 'y',
-        value: 2 * frame.height + content.height
+        value: relief.height
     });
 
     data.push({
@@ -289,7 +284,7 @@ const frameCanvas = () => {
     data.push({
         selector: 'corner_3',
         type: 'y',
-        value: frame.height
+        value: relief.height + frame.height + content.height
     });
 
     //triangle size
@@ -353,43 +348,43 @@ const frameCanvas = () => {
     data.push({
         selector: 'tri_0',
         type: 'y',
-        value: relief.height + frame.height * 2 + content.height
+        value: 0
     });
 
     data.push({
         selector: 'tri_1',
         type: 'x',
-        value: relief.width + content.width
+        value:  content.width + 2 * frame.width
     });
 
     data.push({
         selector: 'tri_1',
         type: 'y',
-        value: relief.height + frame.height * 2 + content.height
+        value: 0
     });
 
     data.push({
         selector: 'tri_2',
         type: 'x',
-        value: relief.width + content.width
+        value: content.width + 2 * frame.width
     });
 
     data.push({
         selector: 'tri_2',
         type: 'y',
-        value: relief.height + frame.height * 2 + content.height
+        value: 0
     });
 
     data.push({
         selector: 'tri_3',
         type: 'x',
-        value: frame.width+ content.width
+        value: 2 * frame.width + content.width
     });
 
     data.push({
         selector: 'tri_3',
         type: 'y',
-        value: relief.height
+        value: relief.height + frame.height + content.height - (relief.height - frame.height)
     });
 
 
@@ -397,7 +392,7 @@ const frameCanvas = () => {
     data.push({
         selector: 'depthFrame_0',
         type: 'width',
-        value: content.width
+        value: content.width + 2 * frame.width - relief.width
     });
 
     data.push({
@@ -409,13 +404,13 @@ const frameCanvas = () => {
     data.push({
         selector: 'depthFrame_1',
         type: 'width',
-        value: content.width
+        value: relief.width
     });
 
     data.push({
         selector: 'depthFrame_1',
         type: 'height',
-        value: relief.height
+        value: content.height + 2 * frame.height - relief.height
     });
 
     //set depth frame position
@@ -428,21 +423,20 @@ const frameCanvas = () => {
     data.push({
         selector: 'depthFrame_0',
         type: 'y',
-        value: relief.height + frame.height * 2 + content.height
+        value: 0
     });
 
     data.push({
         selector: 'depthFrame_1',
         type: 'x',
-        value: relief.width + frame.width * 2 + content.width
+        value: 2 * frame.width + content.width
     });
 
     data.push({
         selector: 'depthFrame_1',
         type: 'y',
-        value: relief.height * 2 + content.height
+        value: relief.height
     });
-
 
 
     // Apply Them all!

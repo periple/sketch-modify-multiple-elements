@@ -501,9 +501,12 @@ function () {
     _classCallCheck(this, UpdateMultipleElements);
 
     this.context = context;
-    this.selector = properties.selector || sketch__WEBPACK_IMPORTED_MODULE_0___default.a.UI.getStringFromUser("What is the ID elements?");
-    this.type = properties.type || sketch__WEBPACK_IMPORTED_MODULE_0___default.a.UI.getStringFromUser("What PROPERTY would you like to change?");
-    this.value = properties.value || sketch__WEBPACK_IMPORTED_MODULE_0___default.a.UI.getStringFromUser("What's the new VALUE?");
+    this.selector = properties.selector; //|| sketch.UI.getStringFromUser("What is the ID elements?");
+
+    this.type = properties.type; // || sketch.UI.getStringFromUser("What PROPERTY would you like to change?");
+
+    this.value = properties.value; // || sketch.UI.getStringFromUser("What's the new VALUE?");
+
     this.modifiedLayers = 0;
 
     if (this.selector && this.selector !== 'null' && this.type && this.type !== 'null' && this.value && this.value !== 'null') {
@@ -601,148 +604,302 @@ var frameCanvas = function frameCanvas() {
     width: 45,
     height: 45
   };
-  var shadow = {
-    width: 45,
-    height: 45
-  };
   var content = {
-    width: mmToPx(1000),
-    height: mmToPx(750)
+    width: mmToPx(300),
+    height: mmToPx(300)
   };
   var data = [];
   /**
    * Relief
    */
-  // Top
+  // cadre interne taille
 
   data.push({
-    selector: 'relief-width',
+    selector: 'innerFrame_0',
     type: 'width',
-    value: content.width + 2 * frame.width + relief.width
+    value: content.width
   });
   data.push({
-    selector: 'relief-top-mask',
-    type: 'x',
-    value: content.width + relief.width * Math.sqrt(2)
-  }); // Right
-
-  data.push({
-    selector: 'relief-right',
-    type: 'x',
-    value: content.width + 2 * frame.width
-  });
-  data.push({
-    selector: 'relief-height',
+    selector: 'innerFrame_0',
     type: 'height',
-    value: content.height + 2 * frame.height + relief.height
+    value: frame.height
   });
   data.push({
-    selector: 'relief-right-mask',
-    type: 'y',
-    value: content.height + 2 * frame.height
-  });
-  /**
-   * Shadow
-   */
-  // Top
-
-  data.push({
-    selector: 'shadow-top',
+    selector: 'innerFrame_2',
     type: 'width',
-    value: content.width - shadow.width
-  }); // Left
-
+    value: content.width
+  });
   data.push({
-    selector: 'shadow-left-height',
+    selector: 'innerFrame_2',
+    type: 'height',
+    value: frame.height
+  });
+  data.push({
+    selector: 'innerFrame_1',
     type: 'height',
     value: content.height
   });
   data.push({
-    selector: 'shadow-left-mask',
-    type: 'y',
-    value: content.height + shadow.height * Math.sqrt(2)
-  }); // Right
-
+    selector: 'innerFrame_1',
+    type: 'width',
+    value: frame.width
+  });
   data.push({
-    selector: 'shadow-right',
+    selector: 'innerFrame_3',
     type: 'height',
-    value: content.height - shadow.height
+    value: content.height
   });
   data.push({
-    selector: 'shadow-right',
+    selector: 'innerFrame_3',
+    type: 'width',
+    value: frame.width
+  }); //cadre interne position
+
+  data.push({
+    selector: 'innerFrame_0',
     type: 'x',
-    value: content.width
-  }); // Bottom
-
+    value: frame.width
+  });
   data.push({
-    selector: 'shadow-bottom',
+    selector: 'innerFrame_0',
     type: 'y',
-    value: content.height + shadow.height * Math.sqrt(2)
+    value: relief.height + frame.height + content.height
   });
   data.push({
-    selector: 'shadow-bottom-width',
-    type: 'width',
-    value: content.width
+    selector: 'innerFrame_1',
+    type: 'x',
+    value: 0
   });
-  /**
-   * Frame
-   */
-  // Width
+  data.push({
+    selector: 'innerFrame_1',
+    type: 'y',
+    value: relief.height + frame.height
+  });
+  data.push({
+    selector: 'innerFrame_2',
+    type: 'x',
+    value: frame.width
+  });
+  data.push({
+    selector: 'innerFrame_2',
+    type: 'y',
+    value: relief.height
+  });
+  data.push({
+    selector: 'innerFrame_3',
+    type: 'x',
+    value: content.width + frame.width
+  });
+  data.push({
+    selector: 'innerFrame_3',
+    type: 'y',
+    value: relief.height + frame.height
+  }); // corner size :
 
   data.push({
-    selector: 'frame-width',
+    selector: 'corner_0',
     type: 'width',
+    value: frame.width
+  });
+  data.push({
+    selector: 'corner_0',
+    type: 'height',
+    value: frame.height
+  });
+  data.push({
+    selector: 'corner_1',
+    type: 'width',
+    value: frame.width
+  });
+  data.push({
+    selector: 'corner_1',
+    type: 'height',
+    value: frame.height
+  });
+  data.push({
+    selector: 'corner_2',
+    type: 'width',
+    value: frame.width
+  });
+  data.push({
+    selector: 'corner_2',
+    type: 'height',
+    value: frame.height
+  });
+  data.push({
+    selector: 'corner_3',
+    type: 'width',
+    value: frame.width
+  });
+  data.push({
+    selector: 'corner_3',
+    type: 'height',
+    value: frame.height
+  }); // corner position :
+
+  data.push({
+    selector: 'corner_0',
+    type: 'x',
+    value: 0
+  });
+  data.push({
+    selector: 'corner_0',
+    type: 'y',
+    value: relief.height + frame.height + content.height
+  });
+  data.push({
+    selector: 'corner_1',
+    type: 'x',
+    value: 0
+  });
+  data.push({
+    selector: 'corner_1',
+    type: 'y',
+    value: relief.height
+  });
+  data.push({
+    selector: 'corner_2',
+    type: 'x',
+    value: frame.width + content.width
+  });
+  data.push({
+    selector: 'corner_2',
+    type: 'y',
+    value: relief.height
+  });
+  data.push({
+    selector: 'corner_3',
+    type: 'x',
+    value: frame.width + content.width
+  });
+  data.push({
+    selector: 'corner_3',
+    type: 'y',
+    value: relief.height + frame.height + content.height
+  }); //triangle size
+
+  data.push({
+    selector: 'tri_0',
+    type: 'width',
+    value: relief.width
+  });
+  data.push({
+    selector: 'tri_0',
+    type: 'height',
+    value: relief.height
+  });
+  data.push({
+    selector: 'tri_1',
+    type: 'width',
+    value: relief.width
+  });
+  data.push({
+    selector: 'tri_1',
+    type: 'height',
+    value: relief.height
+  });
+  data.push({
+    selector: 'tri_2',
+    type: 'width',
+    value: relief.width
+  });
+  data.push({
+    selector: 'tri_2',
+    type: 'height',
+    value: relief.height
+  });
+  data.push({
+    selector: 'tri_3',
+    type: 'width',
+    value: relief.width
+  });
+  data.push({
+    selector: 'tri_3',
+    type: 'height',
+    value: relief.height
+  }); //triangle position
+
+  data.push({
+    selector: 'tri_0',
+    type: 'x',
+    value: 0
+  });
+  data.push({
+    selector: 'tri_0',
+    type: 'y',
+    value: 0
+  });
+  data.push({
+    selector: 'tri_1',
+    type: 'x',
     value: content.width + 2 * frame.width
-  }); // Height
+  });
+  data.push({
+    selector: 'tri_1',
+    type: 'y',
+    value: 0
+  });
+  data.push({
+    selector: 'tri_2',
+    type: 'x',
+    value: content.width + 2 * frame.width
+  });
+  data.push({
+    selector: 'tri_2',
+    type: 'y',
+    value: 0
+  });
+  data.push({
+    selector: 'tri_3',
+    type: 'x',
+    value: 2 * frame.width + content.width
+  });
+  data.push({
+    selector: 'tri_3',
+    type: 'y',
+    value: relief.height + frame.height + content.height - (relief.height - frame.height)
+  }); //set depth frame size
 
   data.push({
-    selector: 'frame-height',
+    selector: 'depthFrame_0',
+    type: 'width',
+    value: content.width + 2 * frame.width - relief.width
+  });
+  data.push({
+    selector: 'depthFrame_0',
     type: 'height',
-    value: content.height + 2 * frame.width
-  }); // Top
-
-  data.push({
-    selector: 'frame-top-mask',
-    type: 'x',
-    value: content.width + frame.width
-  }); // Left
-
-  data.push({
-    selector: 'frame-left-mask',
-    type: 'y',
-    value: content.height + frame.height * (1.715 * Math.sqrt(2))
-  }); // Right
-
-  data.push({
-    selector: 'frame-right',
-    type: 'x',
-    value: content.width + frame.width
+    value: relief.height
   });
   data.push({
-    selector: 'frame-right-mask',
-    type: 'x',
-    value: content.width
+    selector: 'depthFrame_1',
+    type: 'width',
+    value: relief.width
   });
   data.push({
-    selector: 'frame-right-mask',
-    type: 'y',
-    value: content.height + frame.height * (1 + Math.sqrt(2))
-  }); // Bottom
+    selector: 'depthFrame_1',
+    type: 'height',
+    value: content.height + 2 * frame.height - relief.height
+  }); //set depth frame position
 
   data.push({
-    selector: 'frame-bottom',
-    type: 'y',
-    value: content.height + frame.height * (1.715 * Math.sqrt(2))
-  });
-  data.push({
-    selector: 'frame-bottom-mask',
+    selector: 'depthFrame_0',
     type: 'x',
-    value: content.width + frame.width
+    value: relief.width
   });
   data.push({
-    selector: 'frame-bottom-mask',
+    selector: 'depthFrame_0',
     type: 'y',
-    value: content.height + frame.height * Math.sqrt(2)
+    value: 0
+  });
+  data.push({
+    selector: 'depthFrame_1',
+    type: 'x',
+    value: 2 * frame.width + content.width
+  });
+  data.push({
+    selector: 'depthFrame_1',
+    type: 'y',
+    value: relief.height
   }); // Apply Them all!
 
   data.forEach(function (item) {
