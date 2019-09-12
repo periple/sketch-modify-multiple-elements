@@ -6,14 +6,14 @@
         id="frame-9536">
   <style>
     #frame-9536 {
-    -webkit-transform: translate(.8%, -2.15%);
-    -ms-transform: translate(.8%, -2.15%);
-    transform: translate(.8%, -2.15%);
+    -webkit-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
     }
     #frame-9536.portrait {
-    -webkit-transform: rotate(90deg) scale(-2.7, 2.7) translate(-42%, -1%);
-    -ms-transform: rotate(90deg) scale(-2.7, 2.7) translate(-42%, -1%);
-    transform: rotate(90deg) scale(-2.7, 2.7) translate(-42%, -1%);
+    -webkit-transform: rotate(90deg) scale(-1, 1) translate(-0%, -0%);
+    -ms-transform: rotate(90deg) scale(-1, 1) translate(-0%, -0%);
+    transform: rotate(90deg) scale(-1, 1) translate(-0%, -0%);
     }
   </style>
   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
