@@ -605,8 +605,8 @@ var frameCanvas = function frameCanvas() {
     height: 45
   };
   var content = {
-    width: mmToPx(300),
-    height: mmToPx(300)
+    width: mmToPx(1200),
+    height: mmToPx(800)
   };
   var data = [];
   /**
@@ -898,6 +898,317 @@ var frameCanvas = function frameCanvas() {
   });
   data.push({
     selector: 'depthFrame_1',
+    type: 'y',
+    value: relief.height
+  });
+  /*
+      data.push({
+          selector: 'dynamic-color',
+          type: 'width',
+          value: 2 * frame.width + relief.width + content.width
+      });
+  
+      data.push({
+          selector: 'dynamic-color',
+          type: 'height',
+          value: 2 * frame.height + relief.height + content.height
+      });
+  */
+
+  data.push({
+    selector: 'dynamic-color',
+    type: 'x',
+    value: 0
+  });
+  data.push({
+    selector: 'dynamic-color',
+    type: 'y',
+    value: 0
+  });
+  data.push({
+    selector: 'innerFrame_0_background',
+    type: 'width',
+    value: content.width
+  });
+  data.push({
+    selector: 'innerFrame_0_background',
+    type: 'height',
+    value: frame.height
+  });
+  data.push({
+    selector: 'innerFrame_2_background',
+    type: 'width',
+    value: content.width
+  });
+  data.push({
+    selector: 'innerFrame_2_background',
+    type: 'height',
+    value: frame.height
+  });
+  data.push({
+    selector: 'innerFrame_1_background',
+    type: 'height',
+    value: content.height
+  });
+  data.push({
+    selector: 'innerFrame_1_background',
+    type: 'width',
+    value: frame.width
+  });
+  data.push({
+    selector: 'innerFrame_3_background',
+    type: 'height',
+    value: content.height
+  });
+  data.push({
+    selector: 'innerFrame_3_background',
+    type: 'width',
+    value: frame.width
+  }); //cadre interne position
+
+  data.push({
+    selector: 'innerFrame_0_background',
+    type: 'x',
+    value: frame.width
+  });
+  data.push({
+    selector: 'innerFrame_0_background',
+    type: 'y',
+    value: relief.height + frame.height + content.height
+  });
+  data.push({
+    selector: 'innerFrame_1_background',
+    type: 'x',
+    value: 0
+  });
+  data.push({
+    selector: 'innerFrame_1_background',
+    type: 'y',
+    value: relief.height + frame.height
+  });
+  data.push({
+    selector: 'innerFrame_2_background',
+    type: 'x',
+    value: frame.width
+  });
+  data.push({
+    selector: 'innerFrame_2_background',
+    type: 'y',
+    value: relief.height
+  });
+  data.push({
+    selector: 'innerFrame_3_background',
+    type: 'x',
+    value: content.width + frame.width
+  });
+  data.push({
+    selector: 'innerFrame_3_background',
+    type: 'y',
+    value: relief.height + frame.height
+  }); // corner size :
+
+  data.push({
+    selector: 'corner_0_background',
+    type: 'width',
+    value: frame.width
+  });
+  data.push({
+    selector: 'corner_0_background',
+    type: 'height',
+    value: frame.height
+  });
+  data.push({
+    selector: 'corner_1_background',
+    type: 'width',
+    value: frame.width
+  });
+  data.push({
+    selector: 'corner_1_background',
+    type: 'height',
+    value: frame.height
+  });
+  data.push({
+    selector: 'corner_2_background',
+    type: 'width',
+    value: frame.width
+  });
+  data.push({
+    selector: 'corner_2_background',
+    type: 'height',
+    value: frame.height
+  });
+  data.push({
+    selector: 'corner_3_background',
+    type: 'width',
+    value: frame.width
+  });
+  data.push({
+    selector: 'corner_3_background',
+    type: 'height',
+    value: frame.height
+  }); // corner position :
+
+  data.push({
+    selector: 'corner_0_background',
+    type: 'x',
+    value: 0
+  });
+  data.push({
+    selector: 'corner_0_background',
+    type: 'y',
+    value: relief.height + frame.height + content.height
+  });
+  data.push({
+    selector: 'corner_1_background',
+    type: 'x',
+    value: 0
+  });
+  data.push({
+    selector: 'corner_1_background',
+    type: 'y',
+    value: relief.height
+  });
+  data.push({
+    selector: 'corner_2_background',
+    type: 'x',
+    value: frame.width + content.width
+  });
+  data.push({
+    selector: 'corner_2_background',
+    type: 'y',
+    value: relief.height
+  });
+  data.push({
+    selector: 'corner_3_background',
+    type: 'x',
+    value: frame.width + content.width
+  });
+  data.push({
+    selector: 'corner_3_background',
+    type: 'y',
+    value: relief.height + frame.height + content.height
+  }); //triangle size
+
+  data.push({
+    selector: 'tri_0_background',
+    type: 'width',
+    value: relief.width
+  });
+  data.push({
+    selector: 'tri_0_background',
+    type: 'height',
+    value: relief.height
+  });
+  data.push({
+    selector: 'tri_1_background',
+    type: 'width',
+    value: relief.width
+  });
+  data.push({
+    selector: 'tri_1_background',
+    type: 'height',
+    value: relief.height
+  });
+  data.push({
+    selector: 'tri_2_background',
+    type: 'width',
+    value: relief.width
+  });
+  data.push({
+    selector: 'tri_2_background',
+    type: 'height',
+    value: relief.height
+  });
+  data.push({
+    selector: 'tri_3_background',
+    type: 'width',
+    value: relief.width
+  });
+  data.push({
+    selector: 'tri_3_background',
+    type: 'height',
+    value: relief.height
+  }); //triangle position
+
+  data.push({
+    selector: 'tri_0_background',
+    type: 'x',
+    value: 0
+  });
+  data.push({
+    selector: 'tri_0_background',
+    type: 'y',
+    value: 0
+  });
+  data.push({
+    selector: 'tri_1_background',
+    type: 'x',
+    value: content.width + 2 * frame.width
+  });
+  data.push({
+    selector: 'tri_1_background',
+    type: 'y',
+    value: 0
+  });
+  data.push({
+    selector: 'tri_2_background',
+    type: 'x',
+    value: content.width + 2 * frame.width
+  });
+  data.push({
+    selector: 'tri_2_background',
+    type: 'y',
+    value: 0
+  });
+  data.push({
+    selector: 'tri_3_background',
+    type: 'x',
+    value: 2 * frame.width + content.width
+  });
+  data.push({
+    selector: 'tri_3_background',
+    type: 'y',
+    value: relief.height + frame.height + content.height - (relief.height - frame.height)
+  }); //set depth frame size
+
+  data.push({
+    selector: 'depthFrame_0_background',
+    type: 'width',
+    value: content.width + 2 * frame.width - relief.width
+  });
+  data.push({
+    selector: 'depthFrame_0_background',
+    type: 'height',
+    value: relief.height
+  });
+  data.push({
+    selector: 'depthFrame_1_background',
+    type: 'width',
+    value: relief.width
+  });
+  data.push({
+    selector: 'depthFrame_1_background',
+    type: 'height',
+    value: content.height + 2 * frame.height - relief.height
+  }); //set depth frame position
+
+  data.push({
+    selector: 'depthFrame_0_background',
+    type: 'x',
+    value: relief.width
+  });
+  data.push({
+    selector: 'depthFrame_0_background',
+    type: 'y',
+    value: 0
+  });
+  data.push({
+    selector: 'depthFrame_1_background',
+    type: 'x',
+    value: 2 * frame.width + content.width
+  });
+  data.push({
+    selector: 'depthFrame_1_background',
     type: 'y',
     value: relief.height
   }); // Apply Them all!

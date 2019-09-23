@@ -1,9 +1,17 @@
-<svg id="frame-9536" viewBox="0 0 909 909" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <style>
+<svg
+        version="1.1"
+        viewBox="0 0 909 909"
+        id="frame-9536"
+        xmlns="http://www.w3.org/2000/svg"
+        data-edges-width="13" data-edges-height="13"
+        data-relief-width="13" data-relief-height="13"
+>
+    <style
+            id="style4142">
         #frame-9536 {
         -webkit-transform: translate(0%, 0%);
         -ms-transform: translate(0%, 0%);
-        transform: translate(0%, 0%);
+        transform: translate(1%, -1%);
         }
         #frame-9536.portrait {
         -webkit-transform: rotate(90deg) scale(-1, 1) translate(-0%, -0%);
@@ -11,70 +19,147 @@
         transform: rotate(90deg) scale(-1, 1) translate(-0%, -0%);
         }
     </style>
-  <g
-     fill-rule="evenodd"
-     fill="none"
-     stroke-width="1"
-     stroke="none"
-     id="Page-1">
     <g
-       id="Box-Frame-Studio-Masks-cut-edited-simplified">
-      <path
-         id="innerFrame_3"
-         d="m 845,109 0,755 -45,0 0,-755 z"
-         style="fill:#111111;fill-rule:nonzero" />
-      <path
-         id="innerFrame_2"
-         d="M 800,64.006135 800,109 l -0.0662,0 0,-0.006 -754.93376,0 0.06615,0 -0.06615,0 L 45,64 Z"
-         style="fill:#111111;fill-rule:nonzero" />
-      <path
-         id="innerFrame_1"
-         d="M 45,109 45,864 0,864 0,109 Z"
-         style="fill:#000000;fill-rule:nonzero" />
-      <path
-         id="innerFrame_0"
-         d="m 799.93405,864 0,45 L 45,909 l 0,-45 0.06594,0 7e-6,0.0105 754.934048,0 0,-0.0105 z"
-         style="fill:#111111;fill-rule:nonzero" />
-      <path
-         id="corner_3"
-         d="m 800,864 45,0 0,45 -45,0 z"
-         style="fill:#111111" />
-      <path
-         id="corner_2"
-         d="m 800,64 45,0 0,45 -45,0 z"
-         style="fill:#111111" />
-      <path
-         id="corner_1"
-         d="m 0,64 45,0 0,45 -45,0 z"
-         style="fill:#000000" />
-      <path
-         id="corner_0"
-         d="m 0,864 45,0 0,45 -45,0 z"
-         style="fill:#000000" />
-      <path
-         id="depthFrame_1"
-         d="M 909,64 845,64.44427 845,845 l 64,0 z"
-         style="fill:#000000;fill-rule:nonzero" />
-      <path
-         id="depthFrame_0"
-         d="m 64,0 0,64 781,0 0,-64 z"
-         style="fill:#4a4a49;fill-rule:nonzero" />
-      <path
-         id="tri_3"
-         d="m 909,845 -64,0 0,64 0.004,0 z"
-         style="fill:#000000;fill-rule:nonzero" />
-      <path
-         id="tri_2"
-         d="M 909,64 845,64 909,0 Z"
-         style="fill:#000000;fill-rule:nonzero" />
-      <path
-         id="tri_1"
-         d="m 845,0 0,64 64,-64 z"
-         style="fill:#4a4a49;fill-rule:nonzero" />
-      <path
-         id="tri_0"
-         d="M 0,64 64,64 64,0 Z"
-         style="fill:#4a4a49;fill-rule:nonzero" />
+            id="g4144"
+            stroke="none"
+            stroke-width="1"
+            fill="none"
+            fill-rule="evenodd">
+
+        <g
+                fill="#FFFFFF"
+                fill-opacity="1"
+                id="dynamic-color">
+            <g
+                    transform="translate(0.000000, 1.000000)" >
+                <path
+                        d="m 845,109 0,755 -45,0 0,-755 z"
+                        id="innerFrame_3_background"/>
+                <path
+                        d="M 800,64.006135 800,109 l -0.0662,0 0,-0.006 -754.93376,0 0.06615,0 -0.06615,0 L 45,64 Z"
+                        id="innerFrame_2_background"/>
+                <path
+                        d="M 45,109 45,864 0,864 0,109 Z"
+                        id="innerFrame_1_background"/>
+                <path
+                        d="m 799.93405,864 0,45 L 45,909 l 0,-45 0.06594,0 7e-6,0.0105 754.934048,0 0,-0.0105 z"
+                        id="innerFrame_0_background"/>
+                <path
+                        d="m 800,864 45,0 0,45 -45,0 z"
+                        id="corner_3_background"/>
+                <path
+                        d="m 800,64 45,0 0,45 -45,0 z"
+                        id="corner_2_background"/>
+                <path
+                        d="m 0,64 45,0 0,45 -45,0 z"
+                        id="corner_1_background"/>
+                <path
+                        d="m 0,864 45,0 0,45 -45,0 z"
+                        id="corner_0_background"/>
+                <path
+                        d="M 909,64 845,64.44427 845,845 l 64,0 z"
+                        id="depthFrame_1_background"/>
+                <path
+                        d="m 64,0 0,64 781,0 0,-64 z"
+                        id="depthFrame_0_background"/>
+                <path
+                        d="m 909,845 -64,0 0,64 0.004,0 z"
+                        id="tri_3_background"/>
+                <path
+                        d="M 909,64 845,64 909,0 Z"
+                        id="tri_2_background"/>
+                <path
+                        d="m 845,0 0,64 64,-64 z"
+                        id="tri_1_background"/>
+                <path
+                        d="M 0,64 64,64 64,0 Z"
+                        id="tri_0_background"/>
+            </g>
+        </g>
+        <g
+                id="g4146"
+                fill-rule="evenodd"
+                fill="none"
+                stroke-width="1"
+                stroke="none">
+            <g
+                    fill-rule="nonzero"
+                    id="Group">
+                <g
+                        transform="translate(0.000000, 1.000000)"
+                        id="Effects">
+                    <path
+                            fill="#111111"
+                            fill-opacity="0"
+                            d="m 845,109 0,755 -45,0 0,-755 z"
+                            id="innerFrame_3"/>
+                    <path
+                            fill="#111111"
+                            fill-opacity="0"
+                            d="M 800,64.006135 800,109 l -0.0662,0 0,-0.006 -754.93376,0 0.06615,0 -0.06615,0 L 45,64 Z"
+                            id="innerFrame_2"/>
+                    <path
+                            fill="#111111"
+                            fill-opacity="0"
+                            d="M 45,109 45,864 0,864 0,109 Z"
+                            id="innerFrame_1"/>
+                    <path
+                            fill="#111111"
+                            fill-opacity="0"
+                            d="m 799.93405,864 0,45 L 45,909 l 0,-45 0.06594,0 7e-6,0.0105 754.934048,0 0,-0.0105 z"
+                            id="innerFrame_0"/>
+                    <path
+                            fill="#111111"
+                            fill-opacity="0"
+                            d="m 800,864 45,0 0,45 -45,0 z"
+                            id="corner_3"/>
+                    <path
+                            fill="#111111"
+                            fill-opacity="0"
+                            d="m 800,64 45,0 0,45 -45,0 z"
+                            id="corner_2"/>
+                    <path
+                            fill="#111111"
+                            fill-opacity="0"
+                            d="m 0,64 45,0 0,45 -45,0 z"
+                            id="corner_1"/>
+                    <path
+                            fill="#111111"
+                            fill-opacity="0"
+                            d="m 0,864 45,0 0,45 -45,0 z"
+                            id="corner_0"/>
+                    <path
+                            fill="#111111"
+                            fill-opacity=".25"
+                            d="M 909,64 845,64.44427 845,845 l 64,0 z"
+                            id="depthFrame_1"/>
+                    <path
+                            fill="#111111"
+                            fill-opacity="0.15"
+                            d="m 64,0 0,64 781,0 0,-64 z"
+                            id="depthFrame_0"/>
+                    <path
+                            fill="#111111"
+                            fill-opacity=".25"
+                            d="m 909,845 -64,0 0,64 0.004,0 z"
+                            id="tri_3"/>
+                    <path
+                            fill="#111111"
+                            fill-opacity=".25    "
+                            d="M 909,64 845,64 909,0 Z"
+                            id="tri_2"/>
+                    <path
+                            fill="#111111"
+                            fill-opacity=".15"
+                            d="m 845,0 0,64 64,-64 z"
+                            id="tri_1"/>
+                    <path
+                            fill="#111111"
+                            fill-opacity=".15"
+                            d="M 0,64 64,64 64,0 Z"
+                            id="tri_0"/>
+                </g>
+            </g>
+        </g>
     </g>
-  </g>
 </svg>
