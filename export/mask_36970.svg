@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="frame-9536" viewBox="0 0 2043 2799" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>
+        #frame-9536 {
+        -webkit-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+        }
+        #frame-9536.portrait {
+        -webkit-transform: rotate(90deg) scale(-1, 1) translate(-0%, -0%);
+        -ms-transform: rotate(90deg) scale(-1, 1) translate(-0%, -0%);
+        transform: rotate(90deg) scale(-1, 1) translate(-0%, -0%);
+        }
+    </style>
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Box Frame Studio Masks-cut-edited-simplified</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Box-Frame-Studio-Masks-cut-edited-simplified">
+            <polygon id="innerFrame_3" fill="#111111" fill-rule="nonzero" points="1979 109 1979 2754 1934 2754 1934 109"></polygon>
+            <polygon id="innerFrame_2" fill="#111111" fill-rule="nonzero" points="1934 64.0061355 1934 109 1933.83429 109 1933.83429 108.993864 45 108.993864 45.1654979 108.993864 45 108.993864 45 64"></polygon>
+            <polygon id="innerFrame_1" fill="#000000" fill-rule="nonzero" points="46 109 46 2754 1 2754 1 109"></polygon>
+            <polygon id="innerFrame_0" fill="#111111" fill-rule="nonzero" points="1933.83499 2754 1933.83499 2799 45 2799 45 2754 45.1649942 2754 45.1650108 2754.01047 1934 2754.01047 1934 2754"></polygon>
+            <polygon id="corner_3" fill="#111111" points="1934 2754 1979 2754 1979 2799 1934 2799"></polygon>
+            <polygon id="corner_2" fill="#111111" points="1934 64 1979 64 1979 109 1934 109"></polygon>
+            <polygon id="corner_1" fill="#000000" points="1 64 46 64 46 109 1 109"></polygon>
+            <polygon id="corner_0" fill="#000000" points="1 2754 46 2754 46 2799 1 2799"></polygon>
+            <polygon id="depthFrame_1" fill="#000000" fill-rule="nonzero" points="2043 64 1979 65.5193927 1979 2735 2043 2735"></polygon>
+            <polygon id="depthFrame_0" fill="#4A4A49" fill-rule="nonzero" points="64 1 64 65 1979 65 1979 1"></polygon>
+            <polygon id="tri_3" fill="#000000" fill-rule="nonzero" points="2043 2735 1979 2735 1979 2799 1979.0044 2799"></polygon>
+            <polygon id="tri_2" fill="#000000" fill-rule="nonzero" points="2043 64 1979 64 2043 0"></polygon>
+            <polygon id="tri_1" fill="#4A4A49" fill-rule="nonzero" points="1979 1 1979 65 2043 1"></polygon>
+            <polygon id="tri_0" fill="#4A4A49" fill-rule="nonzero" points="0 65.2 64 65.2 64 1.2"></polygon>
+        </g>
+    </g>
+</svg>
