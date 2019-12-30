@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="909px" height="909px" viewBox="0 0 909 909" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Box Frame Studio Masks-cut-edited-simplified</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Box-Frame-Studio-Masks-cut-edited-simplified">
+            <polygon id="innerFrame_3" fill="#111111" fill-rule="nonzero" points="845 109 845 864 800 864 800 109"></polygon>
+            <polygon id="innerFrame_2" fill="#111111" fill-rule="nonzero" points="800 64.0061355 800 109 799.933767 109 799.933767 108.993864 45 108.993864 45.0661466 108.993864 45 108.993864 45 64"></polygon>
+            <polygon id="innerFrame_1" fill="#000000" fill-rule="nonzero" points="46 109 46 864 1 864 1 109"></polygon>
+            <polygon id="innerFrame_0" fill="#111111" fill-rule="nonzero" points="799.934048 864 799.934048 909 45 909 45 864 45.0659453 864 45.0659519 864.010465 800 864.010465 800 864"></polygon>
+            <polygon id="corner_3" fill="#111111" points="800 864 845 864 845 909 800 909"></polygon>
+            <polygon id="corner_2" fill="#111111" points="800 64 845 64 845 109 800 109"></polygon>
+            <polygon id="corner_1" fill="#000000" points="1 64 46 64 46 109 1 109"></polygon>
+            <polygon id="corner_0" fill="#000000" points="1 864 46 864 46 909 1 909"></polygon>
+            <polygon id="depthFrame_1" fill="#000000" fill-rule="nonzero" points="909 64 845 64.4442702 845 845 909 845"></polygon>
+            <polygon id="depthFrame_0" fill="#4A4A49" fill-rule="nonzero" points="64 1 64 65 845 65 845 1"></polygon>
+            <polygon id="tri_3" fill="#000000" fill-rule="nonzero" points="909 845 845 845 845 909 845.0044 909"></polygon>
+            <polygon id="tri_2" fill="#000000" fill-rule="nonzero" points="909 64 845 64 909 0"></polygon>
+            <polygon id="tri_1" fill="#4A4A49" fill-rule="nonzero" points="845 1 845 65 909 1"></polygon>
+            <polygon id="tri_0" fill="#4A4A49" fill-rule="nonzero" points="0 65.2 64 65.2 64 1.2"></polygon>
+        </g>
+    </g>
+</svg>

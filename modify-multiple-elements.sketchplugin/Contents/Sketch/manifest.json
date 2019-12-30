@@ -6,7 +6,7 @@
     {
       "name": "run",
       "identifier": "run-identifier",
-      "script": "modify-multiple-elements.js"
+      "script": "__modify-multiple-elements.js"
     }
   ],
   "menu": {
