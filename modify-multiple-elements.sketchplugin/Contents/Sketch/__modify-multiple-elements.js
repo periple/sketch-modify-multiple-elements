@@ -507,8 +507,8 @@ var frameCanvas = function frameCanvas() {
     height: 45
   };
   var content = {
-    width: mmToPx(450),
-    height: mmToPx(800)
+    width: mmToPx(1200),
+    height: mmToPx(900)
   };
   var data = [];
   /**
