@@ -74,18 +74,20 @@ const mmToPx = (mm) => Math.floor(mm * 3.7795275591);
 
 const frameCanvas = () => {
 
-
+//depth
     const relief = {
-        width: 64,
-        height: 64
+        width: 32,
+        height: 32
     };
+
+    //frame thickness
     const frame = {
         width: 45,
         height: 45
     };
 
-
-    const content = {width: mmToPx(1200), height: mmToPx(900)};
+//frame size
+    const content = {width: mmToPx(600), height: mmToPx(400)};
 
     const data = [];
     /**

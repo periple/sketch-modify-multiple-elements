@@ -498,17 +498,20 @@ var mmToPx = function mmToPx(mm) {
 };
 
 var frameCanvas = function frameCanvas() {
+  //depth
   var relief = {
-    width: 64,
-    height: 64
-  };
+    width: 100,
+    height: 100
+  }; //frame thickness
+
   var frame = {
     width: 45,
     height: 45
-  };
+  }; //frame size
+
   var content = {
-    width: mmToPx(1200),
-    height: mmToPx(900)
+    width: mmToPx(600),
+    height: mmToPx(400)
   };
   var data = [];
   /**

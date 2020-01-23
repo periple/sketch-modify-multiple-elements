@@ -1,0 +1,77 @@
+<svg id="frame-9536" viewBox="0 0 4689 3555" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-edges-width="13" data-edges-height="13"
+         data-relief-width="13" data-relief-height="13" >
+        <style id="style4142">
+            svg {
+            shape-rendering: crispedges;
+            }
+            #frame-9536 {
+            -webkit-transform:translate(0%, -0.5%) scale(1,1);
+            -ms-transform: translate(0%, -0.5%) scale(1,1);
+            transform:translate(0%, -0.5%) scale(1,1);
+            }
+            #frame-9536.portrait {
+            -webkit-transform:rotate(90deg) scale(-1.32, 1.31) translate(-21.1%, -0.1%);
+            -ms-transform: rotate(90deg) scale(-1.32, 1.31) translate(-21.1%, -0.1%);
+            transform: rotate(90deg) scale(-1.32, 1.31) translate(-21.1%, -0.1%);
+            }
+        </style>
+        <g
+                id="g4144"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd">
+
+        <g
+                fill="#FFFFFF"
+                fill-opacity="1"
+                id="dynamic-color">
+            <g
+                    transform="translate(0.000000, 0.000000)" >
+            <polygon id="innerFrame_3_background" points="4625 109 4625 3510 4580 3510 4580 109"></polygon>
+            <polygon id="innerFrame_2_background" points="4580 64.0061355 4580 109 4579.60216 109 4579.60216 108.993864 45 108.993864 45.3973175 108.993864 45 108.993864 45 64"></polygon>
+            <polygon id="innerFrame_1_background" points="46 109 46 3510 1 3510 1 109"></polygon>
+            <polygon id="innerFrame_0_background" points="4579.60385 3510 4579.60385 3555 45 3555 45 3510 45.3961084 3510 45.3961482 3510.01047 4580 3510.01047 4580 3510"></polygon>
+            <polygon id="corner_3_background" points="4580 3510 4625 3510 4625 3555 4580 3555"></polygon>
+            <polygon id="corner_2_background" points="4580 64 4625 64 4625 109 4580 109"></polygon>
+            <polygon id="corner_1_background" points="1 64 46 64 46 109 1 109"></polygon>
+            <polygon id="corner_0_background" points="1 3510 46 3510 46 3555 1 3555"></polygon>
+            <polygon id="depthFrame_1_background" points="4689 64 4625 65.9494417 4625 3491 4689 3491"></polygon>
+            <polygon id="depthFrame_0_background" points="64 1 64 65 4625 65 4625 1"></polygon>
+            <polygon id="tri_3_background" points="4689 3491 4625 3491 4625 3555 4625.0044 3555"></polygon>
+            <polygon id="tri_2_background" points="4689 64 4625 64 4689 0"></polygon>
+            <polygon id="tri_1_background" points="4625 1 4625 65 4689 1"></polygon>
+            <polygon id="tri_0_background" points="0 65.2 64 65.2 64 1.2"></polygon>
+            </g>
+        </g>
+            <g
+                    id="g4146"
+                    fill-rule="evenodd"
+                    fill="none"
+                    stroke-width="1"
+                    stroke="none">
+                <g
+                        fill-rule="nonzero"
+                        id="Group">
+                    <g
+                            transform="translate(0.000000, 1.000000)"
+                            id="Effects">
+                        <polygon id="innerFrame_3" fill="#111111" fill-rule="nonzero" fill-opacity="0" points="4625 109 4625 3510 4580 3510 4580 109"></polygon>
+                        <polygon id="innerFrame_2" fill="#111111" fill-rule="nonzero" fill-opacity="0" points="4580 64.0061355 4580 109 4579.60216 109 4579.60216 108.993864 45 108.993864 45.3973175 108.993864 45 108.993864 45 64"></polygon>
+                        <polygon id="innerFrame_1" fill="#000000" fill-rule="nonzero" fill-opacity="0" points="46 109 46 3510 1 3510 1 109"></polygon>
+                        <polygon id="innerFrame_0" fill="#111111" fill-rule="nonzero" fill-opacity="0" points="4579.60385 3510 4579.60385 3555 45 3555 45 3510 45.3961084 3510 45.3961482 3510.01047 4580 3510.01047 4580 3510"></polygon>
+                        <polygon id="corner_3" fill="#111111" fill-opacity="0" points="4580 3510 4625 3510 4625 3555 4580 3555"></polygon>
+                        <polygon id="corner_2" fill="#111111" fill-opacity="0" points="4580 64 4625 64 4625 109 4580 109"></polygon>
+                        <polygon id="corner_1" fill="#000000" fill-opacity="0" points="1 64 46 64 46 109 1 109"></polygon>
+                        <polygon id="corner_0" fill="#000000" fill-opacity="0" points="1 3510 46 3510 46 3555 1 3555"></polygon>
+                        <polygon id="depthFrame_1" fill="#000000" fill-rule="nonzero" fill-opacity=".25" points="4689 64 4625 65.9494417 4625 3491 4689 3491"></polygon>
+                        <polygon id="depthFrame_0" fill="#4A4A49" fill-rule="nonzero" fill-opacity=".15" points="64 1 64 65 4625 65 4625 1"></polygon>
+                        <polygon id="tri_3" fill="#000000" fill-rule="nonzero" fill-opacity=".25" points="4689 3491 4625 3491 4625 3555 4625.0044 3555"></polygon>
+                        <polygon id="tri_2" fill="#000000" fill-rule="nonzero" fill-opacity=".25" points="4689 64 4625 64 4689 0"></polygon>
+                        <polygon id="tri_1" fill="#4A4A49" fill-rule="nonzero" fill-opacity=".15" points="4625 1 4625 65 4689 1"></polygon>
+                        <polygon id="tri_0" fill="#4A4A49" fill-rule="nonzero" fill-opacity=".15" points="0 65.2 64 65.2 64 1.2"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+</svg>
