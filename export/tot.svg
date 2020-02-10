@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2402px" height="1645px" viewBox="0 0 2402 1645" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>mask_36480</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="mask_36480" fill-rule="nonzero">
+            <g id="dynamic-color" fill="#FFFFFF">
+                <g id="Group">
+                    <polygon id="innerFrame_3_background" points="2357 89 2357 1600 2312 1600 2312 89"></polygon>
+                    <polygon id="innerFrame_2_background" points="2312 44.006135 2312 89 2311.80122 89 2311.80122 88.994 45.0001201 88.994 45.1987453 88.994 45.0001201 88.994 45 44"></polygon>
+                    <polygon id="innerFrame_1_background" points="45 89 45 1600 0 1600 0 89"></polygon>
+                    <polygon id="innerFrame_0_background" points="2311.80199 1600 2311.80199 1645 45 1645 45 1600 45.1979947 1600 45.1980157 1600.0105 2312 1600.0105 2312 1600"></polygon>
+                    <polygon id="corner_3_background" points="2312 1600 2357 1600 2357 1645 2312 1645"></polygon>
+                    <polygon id="corner_2_background" points="2312 44 2357 44 2357 89 2312 89"></polygon>
+                    <polygon id="corner_1_background" points="0 44 45 44 45 89 0 89"></polygon>
+                    <polygon id="corner_0_background" points="0 1600 45 1600 45 1645 0 1645"></polygon>
+                    <polygon id="depthFrame_1_background" points="2402 44 2357 44.8851269 2357 1600 2402 1600"></polygon>
+                    <polygon id="depthFrame_0_background" points="45 0 45 45 2357 45 2357 0"></polygon>
+                    <polygon id="tri_3_background" points="2402 1600 2357 1600 2357 1645 2357.00281 1645"></polygon>
+                    <polygon id="tri_2_background" points="2402 45 2357 45 2402 0"></polygon>
+                    <polygon id="tri_1_background" points="2357 0 2357 45 2402 0"></polygon>
+                    <polygon id="tri_0_background" points="0 45 45 45 45 0"></polygon>
+                </g>
+            </g>
+            <g id="g4146" fill="#111111">
+                <g id="Group">
+                    <g id="Effects">
+                        <polygon id="innerFrame_3" fill-opacity="0" points="2357 89 2357 1600 2312 1600 2312 89"></polygon>
+                        <polygon id="innerFrame_2" fill-opacity="0" points="2312 44.006135 2312 89 2311.80122 89 2311.80122 88.994 45.0001201 88.994 45.1987453 88.994 45.0001201 88.994 45 44"></polygon>
+                        <polygon id="innerFrame_1" fill-opacity="0" points="45 89 45 1600 0 1600 0 89"></polygon>
+                        <polygon id="innerFrame_0" fill-opacity="0" points="2311.80199 1600 2311.80199 1645 45 1645 45 1600 45.1979947 1600 45.1980157 1600.0105 2312 1600.0105 2312 1600"></polygon>
+                        <polygon id="corner_3" fill-opacity="0" points="2312 1600 2357 1600 2357 1645 2312 1645"></polygon>
+                        <polygon id="corner_2" fill-opacity="0" points="2312 44 2357 44 2357 89 2312 89"></polygon>
+                        <polygon id="corner_1" fill-opacity="0" points="0 44 45 44 45 89 0 89"></polygon>
+                        <polygon id="corner_0" fill-opacity="0" points="0 1600 45 1600 45 1645 0 1645"></polygon>
+                        <polygon id="depthFrame_1" fill-opacity="0.25" points="2402 44 2357 44.8851269 2357 1600 2402 1600"></polygon>
+                        <polygon id="depthFrame_0" fill-opacity="0.15" points="45 0 45 45 2357 45 2357 0"></polygon>
+                        <polygon id="tri_3" fill-opacity="0.25" points="2402 1600 2357 1600 2357 1645 2357.00281 1645"></polygon>
+                        <polygon id="tri_2" fill-opacity="0.25" points="2402 45 2357 45 2402 0"></polygon>
+                        <polygon id="tri_1" fill-opacity="0.15" points="2357 0 2357 45 2402 0"></polygon>
+                        <polygon id="tri_0" fill-opacity="0.15" points="0 45 45 45 45 0"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

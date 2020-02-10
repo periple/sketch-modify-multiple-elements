@@ -500,18 +500,27 @@ var mmToPx = function mmToPx(mm) {
 var frameCanvas = function frameCanvas() {
   //depth
   var relief = {
-    width: 100,
-    height: 100
+    width: 32,
+    height: 32
   }; //frame thickness
 
   var frame = {
     width: 45,
     height: 45
-  }; //frame size
+  };
+  var apertureSize = {
+    width: mmToPx(200),
+    height: mmToPx(300)
+  };
+  var totalWidth = apertureSize.width + 2 * frame.width + relief.width;
+  var totalHeight = apertureSize.height + 2 * frame.height + relief.height;
+  var scaleWidth = apertureSize.width * apertureSize.width / totalWidth;
+  var scaleHeight = apertureSize.height * apertureSize.height / totalHeight;
+  console.log(scaleWidth, scaleHeight); //frame size
 
   var content = {
-    width: mmToPx(600),
-    height: mmToPx(400)
+    width: scaleWidth,
+    height: scaleHeight
   };
   var data = [];
   /**

@@ -85,9 +85,19 @@ const frameCanvas = () => {
         width: 45,
         height: 45
     };
+    const apertureSize = {
+        width: mmToPx(200),
+        height: mmToPx(300)
+    };
+    const totalWidth = apertureSize.width+2*frame.width+relief.width;
+    const totalHeight = apertureSize.height+ 2*frame.height+relief.height;
+
+    const scaledWidth = apertureSize.width * apertureSize.width/totalWidth;
+    const scaledHeight = apertureSize.height * apertureSize.height/totalHeight;
+
 
 //frame size
-    const content = {width: mmToPx(600), height: mmToPx(400)};
+    const content = {width: scaledWidth, height:scaledHeight};
 
     const data = [];
     /**
