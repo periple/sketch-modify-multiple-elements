@@ -500,29 +500,52 @@ var mmToPx = function mmToPx(mm) {
 var frameCanvas = function frameCanvas() {
   //depth
   var relief = {
-    width: 32,
-    height: 32
+    width: mmToPx(3),
+    height: mmToPx(3)
   }; //frame thickness
 
   var frame = {
-    width: 45,
-    height: 45
+    width: mmToPx(5),
+    height: mmToPx(5)
   };
-  var apertureSize = {
-    width: mmToPx(200),
-    height: mmToPx(300)
+  var aperture = {
+    width: mmToPx(1200),
+    height: mmToPx(900)
   };
-  var totalWidth = apertureSize.width + 2 * frame.width + relief.width;
-  var totalHeight = apertureSize.height + 2 * frame.height + relief.height;
-  var scaleWidth = apertureSize.width * apertureSize.width / totalWidth;
-  var scaleHeight = apertureSize.height * apertureSize.height / totalHeight;
-  console.log(scaleWidth, scaleHeight); //frame size
+  var px = 2 * frame.width + relief.width;
+  var py = 2 * frame.height + relief.height;
+  var totalWidth = aperture.width + px;
+  var totalHeight = aperture.height + py;
+  var scaledWidth = aperture.width / totalWidth;
+  var scaledHeight = apertureSize.height / totalHeight;
+  var translateWidth = px * scaledWidth;
+  var translateHeight = py * scaledHeight; //frame size
 
   var content = {
-    width: scaleWidth,
-    height: scaleHeight
+    width: aperture.width,
+    height: aperture.height
   };
   var data = [];
+  data.push({
+    selector: 'Effects',
+    type: 'scaledWidth',
+    value: scaledWidth
+  });
+  data.push({
+    selector: 'Effects',
+    type: 'scaledHeight',
+    value: scaledHeight
+  });
+  data.push({
+    selector: 'Effects',
+    type: 'translateWidth',
+    value: translateWidth
+  });
+  data.push({
+    selector: 'Effects',
+    type: 'translateHeight',
+    value: translateHeight
+  });
   /**
    * Relief
    */

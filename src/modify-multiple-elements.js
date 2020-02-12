@@ -76,30 +76,59 @@ const frameCanvas = () => {
 
 //depth
     const relief = {
-        width: 32,
-        height: 32
+        width: mmToPx(3),
+        height: mmToPx(3)
     };
 
     //frame thickness
     const frame = {
-        width: 45,
-        height: 45
+        width: mmToPx(5),
+        height: mmToPx(5)
     };
-    const apertureSize = {
-        width: mmToPx(200),
-        height: mmToPx(300)
+    const aperture = {
+        width: mmToPx(1200),
+        height: mmToPx(900)
     };
-    const totalWidth = apertureSize.width+2*frame.width+relief.width;
-    const totalHeight = apertureSize.height+ 2*frame.height+relief.height;
+    const px = 2*frame.width+relief.width;
+    const py = 2*frame.height+relief.height;
 
-    const scaledWidth = apertureSize.width * apertureSize.width/totalWidth;
-    const scaledHeight = apertureSize.height * apertureSize.height/totalHeight;
+    const totalWidth = aperture.width + px;
+    const totalHeight = aperture.height+ py;
+
+    const scaledWidth = aperture.width/totalWidth;
+    const scaledHeight = apertureSize.height/totalHeight;
+
+    const translateWidth = px * scaledWidth;
+    const translateHeight = py *scaledHeight;
 
 
 //frame size
-    const content = {width: scaledWidth, height:scaledHeight};
+    const content = {width: aperture.width, height:aperture.height};
 
     const data = [];
+    // how to push data in svg from sketch point of view ?
+    data.push({
+        selector: 'Effects',
+        type: 'scaledWidth',
+        value: scaledWidth
+    });
+    data.push({
+        selector: 'Effects',
+        type: 'scaledHeight',
+        value: scaledHeight
+    });
+
+    data.push({
+        selector: 'Effects',
+        type: 'translateWidth',
+        value: translateWidth
+    });
+    data.push({
+        selector: 'Effects',
+        type: 'translateHeight',
+        value: translateHeight
+    });
+
     /**
      * Relief
      */
