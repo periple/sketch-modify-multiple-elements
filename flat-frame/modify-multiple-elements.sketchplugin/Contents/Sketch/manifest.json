@@ -6,18 +6,18 @@
     {
       "name": "run",
       "identifier": "run-identifier",
-      "script": "__modify-multiple-elements.js"
+      "script": "modify-multiple-elements.js"
     }
   ],
   "menu": {
-    "title": "Modify multiple elements",
+    "title": "Modify multiple elements flat frame",
     "items": [
       "run-identifier"
     ]
   },
   "version": "0.1.0",
-  "name": "modify-multiple-elements",
-  "identifier": "modify-multiple-elements",
+  "name": "modify-multiple-elements-flat-frame",
+  "identifier": "modify-multiple-elements-flat-frame",
   "disableCocoaScriptPreprocessor": true,
   "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
   "author": "Photobox",

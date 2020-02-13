@@ -1,11 +1,11 @@
 {
-  "name": "sketch-modify-multiple-elements",
+  "name": "sketch-modify-multiple-elements-flat-frame",
   "version": "0.1.0",
   "engines": {
     "sketch": ">=3.0"
   },
   "skpm": {
-    "name": "modify-multiple-elements",
+    "name": "modify-multiple-elements-flat-frame",
     "manifest": "src/manifest.json",
     "main": "modify-multiple-elements.sketchplugin",
     "assets": [

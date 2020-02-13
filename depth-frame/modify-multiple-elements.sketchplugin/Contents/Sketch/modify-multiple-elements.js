@@ -218,12 +218,15 @@ function finallyConstructor(callback) {
   var constructor = this.constructor;
   return this.then(
     function(value) {
+      // @ts-ignore
       return constructor.resolve(callback()).then(function() {
         return value;
       });
     },
     function(reason) {
+      // @ts-ignore
       return constructor.resolve(callback()).then(function() {
+        // @ts-ignore
         return constructor.reject(reason);
       });
     }
@@ -233,6 +236,10 @@ function finallyConstructor(callback) {
 // Store setTimeout reference so promise-polyfill will be unaffected by
 // other code modifying setTimeout (like sinon.useFakeTimers())
 var setTimeoutFunc = setTimeout;
+
+function isArray(x) {
+  return Boolean(x && typeof x.length !== 'undefined');
+}
 
 function noop() {}
 
@@ -391,8 +398,10 @@ Promise.prototype['finally'] = finallyConstructor;
 
 Promise.all = function(arr) {
   return new Promise(function(resolve, reject) {
-    if (!arr || typeof arr.length === 'undefined')
-      throw new TypeError('Promise.all accepts an array');
+    if (!isArray(arr)) {
+      return reject(new TypeError('Promise.all accepts an array'));
+    }
+
     var args = Array.prototype.slice.call(arr);
     if (args.length === 0) return resolve([]);
     var remaining = args.length;
@@ -443,18 +452,24 @@ Promise.reject = function(value) {
   });
 };
 
-Promise.race = function(values) {
+Promise.race = function(arr) {
   return new Promise(function(resolve, reject) {
-    for (var i = 0, len = values.length; i < len; i++) {
-      values[i].then(resolve, reject);
+    if (!isArray(arr)) {
+      return reject(new TypeError('Promise.race accepts an array'));
+    }
+
+    for (var i = 0, len = arr.length; i < len; i++) {
+      Promise.resolve(arr[i]).then(resolve, reject);
     }
   });
 };
 
 // Use polyfill for setImmediate for performance gains
 Promise._immediateFn =
+  // @ts-ignore
   (typeof setImmediate === 'function' &&
     function(fn) {
+      // @ts-ignore
       setImmediate(fn);
     }) ||
   function(fn) {
@@ -596,19 +611,55 @@ var mmToPx = function mmToPx(mm) {
 };
 
 var frameCanvas = function frameCanvas() {
+  //depth
   var relief = {
-    width: 64,
-    height: 64
-  };
+    width: mmToPx(3),
+    height: mmToPx(3)
+  }; //frame thickness
+
   var frame = {
-    width: 45,
-    height: 45
+    width: mmToPx(5),
+    height: mmToPx(5)
   };
-  var content = {
+  var aperture = {
     width: mmToPx(1200),
-    height: mmToPx(800)
+    height: mmToPx(900)
   };
-  var data = [];
+  var px = 2 * frame.width + relief.width;
+  var py = 2 * frame.height + relief.height;
+  var totalWidth = aperture.width + px;
+  var totalHeight = aperture.height + py;
+  var scaledWidth = aperture.width / totalWidth;
+  var scaledHeight = apertureSize.height / totalHeight;
+  var translateWidth = px * scaledWidth;
+  var translateHeight = py * scaledHeight; //frame size
+
+  var content = {
+    width: aperture.width,
+    height: aperture.height
+  };
+  var data = []; // how to push data in svg from sketch point of view ?
+
+  data.push({
+    selector: 'Effects',
+    type: 'scaledWidth',
+    value: scaledWidth
+  });
+  data.push({
+    selector: 'Effects',
+    type: 'scaledHeight',
+    value: scaledHeight
+  });
+  data.push({
+    selector: 'Effects',
+    type: 'translateWidth',
+    value: translateWidth
+  });
+  data.push({
+    selector: 'Effects',
+    type: 'translateHeight',
+    value: translateHeight
+  });
   /**
    * Relief
    */
