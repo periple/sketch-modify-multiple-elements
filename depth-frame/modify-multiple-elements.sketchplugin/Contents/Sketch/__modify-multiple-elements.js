@@ -525,7 +525,8 @@ var frameCanvas = function frameCanvas() {
     width: aperture.width,
     height: aperture.height
   };
-  var data = [];
+  var data = []; // how to push data in svg from sketch point of view ?
+
   data.push({
     selector: 'Effects',
     type: 'scaledWidth',
