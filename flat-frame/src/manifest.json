@@ -1,0 +1,18 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "run",
+      "identifier": "run-identifier",
+      "script": "./modify-multiple-elements.js"
+    }
+  ],
+  "menu": {
+    "title": "Modify multiple elements",
+    "items": [
+      "run-identifier"
+    ]
+  }
+}
