@@ -96,7 +96,7 @@ const frameCanvas = () => {
     const totalHeight = aperture.height+ py;
 
     const scaledWidth = aperture.width/totalWidth;
-    const scaledHeight = apertureSize.height/totalHeight;
+    const scaledHeight = aperture.height/totalHeight;
 
     const translateWidth = px * scaledWidth;
     const translateHeight = py *scaledHeight;
