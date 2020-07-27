@@ -507,9 +507,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
-var UpdateMultipleElements =
-/*#__PURE__*/
-function () {
+var UpdateMultipleElements = /*#__PURE__*/function () {
   function UpdateMultipleElements(context, properties) {
     var _this = this;
 
@@ -613,24 +611,24 @@ var mmToPx = function mmToPx(mm) {
 var frameCanvas = function frameCanvas() {
   //depth
   var relief = {
-    width: mmToPx(3),
-    height: mmToPx(3)
+    width: mmToPx(4),
+    height: mmToPx(4)
   }; //frame thickness
 
   var frame = {
-    width: mmToPx(5),
-    height: mmToPx(5)
+    width: mmToPx(10),
+    height: mmToPx(10)
   };
   var aperture = {
-    width: mmToPx(1200),
-    height: mmToPx(900)
+    width: mmToPx(261),
+    height: mmToPx(194)
   };
   var px = 2 * frame.width + relief.width;
   var py = 2 * frame.height + relief.height;
   var totalWidth = aperture.width + px;
   var totalHeight = aperture.height + py;
   var scaledWidth = aperture.width / totalWidth;
-  var scaledHeight = apertureSize.height / totalHeight;
+  var scaledHeight = aperture.height / totalHeight;
   var translateWidth = px * scaledWidth;
   var translateHeight = py * scaledHeight; //frame size
 

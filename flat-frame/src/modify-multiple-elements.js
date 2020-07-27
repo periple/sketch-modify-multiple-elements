@@ -87,7 +87,7 @@ const frameCanvas = () => {
     };
 
 //frame size
-    const content = {width: mmToPx(200), height: mmToPx(200)};
+    const content = {width: mmToPx(200), height: mmToPx(400)};
 
     const data = [];
     /**

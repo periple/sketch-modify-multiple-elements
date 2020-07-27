@@ -9,6 +9,8 @@ class UpdateMultipleElements {
         this.value = properties.value;// || sketch.UI.getStringFromUser("What's the new VALUE?");
         this.modifiedLayers = 0;
 
+        sketch.UI.message("Hello World")
+
         if (this.selector && this.selector !== 'null'
             && this.type && this.type !== 'null'
             && this.value && this.value !== 'null') {
@@ -76,59 +78,20 @@ const frameCanvas = () => {
 
 //depth
     const relief = {
-        width: mmToPx(4),
-        height: mmToPx(4)
+        width: 32,
+        height: 32
     };
 
     //frame thickness
     const frame = {
-        width: mmToPx(10),
-        height: mmToPx(10)
+        width: 145,
+        height: 145
     };
-    const aperture = {
-        width: mmToPx(261), 
-        height: mmToPx(194)
-    };
-    const px = 2*frame.width+relief.width;
-    const py = 2*frame.height+relief.height;
-
-    const totalWidth = aperture.width + px;
-    const totalHeight = aperture.height+ py;
-
-    const scaledWidth = aperture.width/totalWidth;
-    const scaledHeight = aperture.height/totalHeight;
-
-    const translateWidth = px * scaledWidth;
-    const translateHeight = py *scaledHeight;
-
 
 //frame size
-    const content = {width: aperture.width, height:aperture.height};
+    const content = {width: mmToPx(200), height: mmToPx(200)};
 
     const data = [];
-    // how to push data in svg from sketch point of view ?
-    data.push({
-        selector: 'Effects',
-        type: 'scaledWidth',
-        value: scaledWidth
-    });
-    data.push({
-        selector: 'Effects',
-        type: 'scaledHeight',
-        value: scaledHeight
-    });
-
-    data.push({
-        selector: 'Effects',
-        type: 'translateWidth',
-        value: translateWidth
-    });
-    data.push({
-        selector: 'Effects',
-        type: 'translateHeight',
-        value: translateHeight
-    });
-
     /**
      * Relief
      */
